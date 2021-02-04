@@ -1,0 +1,36 @@
+
+CREATE SCHEMA r0613846_proef
+
+CREATE TABLE r0613846_proef.veggie
+(
+    name character varying,
+    price double precision,
+    vegetarian boolean
+
+)
+WITH (
+    OIDS = FALSE
+);
+
+GRANT ALL ON SCHEMA r0613846_proef TO local_r0613846;
+GRANT ALL ON TABLE r0613846_proef.veggie TO local_r0613846;
+
+GRANT ALL ON TABLE r0613846_proef.veggie TO local_u0015529;
+GRANT ALL ON TABLE r0613846_proef.veggie TO u0015529;
+
+
+ INSERT INTO r0613846_proef.veggie (name, price, vegetarian) VALUES
+	('Apple', 1, 'yes');
+
+INSERT INTO r0613846_proef.veggie (name, price, vegetarian) VALUES
+	('Milk', 1.7, 'yes');
+
+INSERT INTO r0613846_proef.veggie (name, price, vegetarian) VALUES
+	('Quorn', '2.3', 'yes');
+
+INSERT INTO r0613846_proef.veggie (name, price, vegetarian) VALUES
+	('Chicken', '3.1', 'no');
+
+INSERT INTO r0613846_proef.veggie (name, price, vegetarian) VALUES
+	('Pork', '4.3', 'no');
+
